@@ -1,0 +1,18 @@
+version: '3.7'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    volumes:
+      - .:/go/src/github.com/alexeyco/golang
+    working_dir: /go/src/github.com/alexeyco/golang
+    command: tail -f /dev/null
+    networks:
+      - internal
+
+networks:
+  internal:
+    external: false
