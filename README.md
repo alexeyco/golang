@@ -22,7 +22,7 @@ version: '3.7'
 
 services:
   app:
-    image: git.ccto.dev/docker/golang:latest
+    image: alexeyco/golang:latest
     restart: unless-stopped
     volumes:
       - .:/go/src/path/to/source
