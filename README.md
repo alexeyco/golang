@@ -8,13 +8,13 @@ Based on Linux Alpine 3.11
 [![Docker Stars](https://img.shields.io/docker/stars/alexeyco/golang)](https://hub.docker.com/r/alexeyco/golang)
 
 ## Includes
-| Tool                                                  | Version | Description            |
-|-------------------------------------------------------|---------|------------------------|
-| [ginkgo](https://github.com/onsi/ginkgo)              | v1.12.0 | BDD testing framework  |
-| [gqlgen](https://github.com/99designs/gqlgen)         | v0.11.1 | GraphQL server library |
-| [golangci](https://github.com/golangci/golangci-lint) | v1.23.7 | Golang linter          |
-| Git                                                   | v2.24.1 | In Linus we trust!     |
-| Make                                                  | v4.2.1  | GNU Make               |
+| Tool                                                    | Version | Description            |
+|---------------------------------------------------------|---------|------------------------|
+| [ginkgo](https://github.com/onsi/ginkgo)                | v1.12.0 | BDD testing framework  |
+| [golangci](https://github.com/golangci/golangci-lint)   | v1.23.7 | Golang linter          |
+| [protobuf](https://github.com/protocolbuffers/protobuf) | v3.11.2 | Protocol buffers       |
+| Git                                                     | v2.24.1 | In Linus we trust!     |
+| Make                                                    | v4.2.1  | GNU Make               |
 
 ## Example usage
 ```yaml

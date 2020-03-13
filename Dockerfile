@@ -11,10 +11,10 @@ RUN apk update \
         curl \
     # BDD testing framework
     && go get -u github.com/onsi/ginkgo/ginkgo@v1.11.0 \
-    # GraphQL server library
-    && go get -u github.com/99designs/gqlgen@v0.11.1 \
     # Golang linter
-    && curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b $(go env GOPATH)/bin v1.23.7
+    && curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b $(go env GOPATH)/bin v1.23.7 \
+    # Go support for protobuf
+    && go get -u github.com/golang/protobuf/protoc-gen-go@v1.3.5
 
 # And finally build our image
 FROM golang:1.14.0-alpine3.11
@@ -24,11 +24,12 @@ ENV XDG_CACHE_HOME /tmp/go-build
 ENV GO111MODULE on
 
 COPY --from=build /go/bin/ginkgo /bin/ginkgo
-COPY --from=build /go/bin/gqlgen /bin/gqlgen
 COPY --from=build /go/bin/golangci-lint /bin/golangci-lint
+COPY --from=build /go/bin/protoc-gen-go /bin/protoc-gen-go
 
 RUN apk update \
     && apk upgrade \
     && apk add --no-cache \
+      protobuf \
       git \
       make
