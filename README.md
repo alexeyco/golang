@@ -8,13 +8,15 @@ Based on Linux Alpine 3.11
 [![Docker Stars](https://img.shields.io/docker/stars/alexeyco/golang)](https://hub.docker.com/r/alexeyco/golang)
 
 ## Includes
-| Tool                                                    | Version | Description            |
-|---------------------------------------------------------|---------|------------------------|
-| [ginkgo](https://github.com/onsi/ginkgo)                | v1.12.0 | BDD testing framework  |
-| [golangci](https://github.com/golangci/golangci-lint)   | v1.23.7 | Golang linter          |
-| [protobuf](https://github.com/protocolbuffers/protobuf) | v3.11.2 | Protocol buffers       |
-| Git                                                     | v2.24.1 | In Linus we trust!     |
-| Make                                                    | v4.2.1  | GNU Make               |
+| Tool                                                          | Version | Description                        |
+|---------------------------------------------------------------|---------|------------------------------------|
+| [ginkgo](https://github.com/onsi/ginkgo)                      | v1.12.0 | BDD testing framework              |
+| [golangci](https://github.com/golangci/golangci-lint)         | v1.23.7 | Golang linter                      |
+| [protobuf](https://github.com/protocolbuffers/protobuf)       | v3.11.2 | Protocol buffers                   |
+| [protoc-gen-go](https://github.com/golang/protobuf)           | v1.3.5  | Protobuf code generation for go    |
+| [protoc-gen-micro](https://github.com/micro/protoc-gen-micro) | v2.0.0  | Protobuf code generation for micro |
+| Git                                                           | v2.24.1 | In Linus we trust!                 |
+| Make                                                          | v4.2.1  | GNU Make                           |
 
 ## Example usage
 ```yaml
