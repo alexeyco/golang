@@ -16,7 +16,13 @@ RUN apk update \
     # Protobuf code generation for go
     && go get -u github.com/golang/protobuf/protoc-gen-go@v1.3.5 \
     # Protobuf code generation for micro
-    && go get -u github.com/micro/protoc-gen-micro/v2@v2.0.0
+    && go get -u github.com/micro/protoc-gen-micro/v2@v2.0.0 \
+    # A Micro services runtime environment
+    && export MICRO=micro-v2.2.0-linux-amd64.tar.gz \
+    && cd /tmp \
+    && wget https://github.com/micro/micro/releases/download/v2.2.0/$MICRO \
+    && tar zxvpf $MICRO \
+    && mv ./micro /go/bin/micro
 
 # And finally build our image
 FROM golang:1.14.0-alpine3.11
@@ -29,6 +35,7 @@ COPY --from=build /go/bin/ginkgo /bin/ginkgo
 COPY --from=build /go/bin/golangci-lint /bin/golangci-lint
 COPY --from=build /go/bin/protoc-gen-go /bin/protoc-gen-go
 COPY --from=build /go/bin/protoc-gen-micro /bin/protoc-gen-micro
+COPY --from=build /go/bin/micro /bin/micro
 
 RUN apk update \
     && apk upgrade \
