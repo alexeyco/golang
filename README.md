@@ -2,7 +2,7 @@
 Based on Linux Alpine 3.11
 
 [![Docker Build Status](https://img.shields.io/docker/cloud/build/alexeyco/golang)](https://hub.docker.com/r/alexeyco/golang)
-[![MicroBadger Size](https://img.shields.io/microbadger/image-size/alexeyco/golang)](https://hub.docker.com/r/alexeyco/golang)
+![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/alexeyco/golang)
 [![MicroBadger Layers](https://img.shields.io/microbadger/layers/alexeyco/golang)](https://hub.docker.com/r/alexeyco/golang)
 [![Docker Pulls](https://img.shields.io/docker/pulls/alexeyco/golang)](https://hub.docker.com/r/alexeyco/golang)
 [![Docker Stars](https://img.shields.io/docker/stars/alexeyco/golang)](https://hub.docker.com/r/alexeyco/golang)
